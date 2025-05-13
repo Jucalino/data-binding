@@ -13,6 +13,11 @@ export class DataBidingComponent implements OnInit {
   valorAtual: string = ''
   valorSalvo: string = ''
   isMouseOver: boolean = false
+  nome:string = 'Juca'
+  pessoa = {
+    nome: 'Duda',
+    idade: 22
+  }
 
   getValor(){
     return 1
@@ -25,6 +30,7 @@ export class DataBidingComponent implements OnInit {
   onKeyUp(evento: KeyboardEvent){
     this.valorAtual = (<HTMLInputElement>evento.target).value
   }
+
 
   salvarValor(valor: any){
     this.valorSalvo  = valor
