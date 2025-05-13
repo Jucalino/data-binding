@@ -19,6 +19,8 @@ export class DataBidingComponent implements OnInit {
     idade: 22
   }
 
+  nomeDoCurso: string = 'Angular'
+
   getValor(){
     return 1
   }
