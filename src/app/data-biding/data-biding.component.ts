@@ -8,6 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class DataBidingComponent implements OnInit {
 
   url: string = 'http://loiane.com'
+  angular: boolean = true
+  urlImagem = 'https://fastly.picsum.photos/id/375/400/200.jpg?hmac=CqYRFOMFNJPdoXEyu5OHJsrnewwStZlDpvoIUkeVTXI'
+
+  getValor(){
+    return 1
+  }
+
+  getCurtirCurso(){
+    return true
+  }
 
   constructor() { }
 
