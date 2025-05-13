@@ -1,5 +1,5 @@
-<section class="property-binding">
-  <!-- <article>
+<!-- <section class="property-binding">
+  <article>
     <h3>Interpolação / Interpolation</h3>
     <p>String renderizada com interpolação: {{ url }}</p>
     <p>Resultado de 1+1 é: {{ 1 + 1 }}</p>
@@ -11,8 +11,10 @@
     <h3>Property Binding</h3>
     <img src="{{ urlImagem }}">
     <img [src]="urlImagem">
-  </article> -->
-
+  </article>
+</section> -->
+<!--
+<section class="class-style-binding">
   <article>
     <h3>Class e Style Binding</h3>
     <div>
@@ -44,6 +46,34 @@
         <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
           Esse texto somente aparece em caso de erro
         </div>
+    </div>
+  </article>
+</section> -->
+
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">
+        botão lixeira
+      </button>
+
+      <br /><br />
+
+      <input
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput
+      />
+
+      <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+      <br />
+      <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+        Passa esse mouse lixo em cima de mim
+      </span>
     </div>
   </article>
 </section>
