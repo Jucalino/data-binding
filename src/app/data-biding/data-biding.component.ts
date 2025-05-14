@@ -19,6 +19,7 @@ export class DataBidingComponent implements OnInit {
     idade: 22
   }
 
+  valorInicial = 15
   nomeDoCurso: string = 'Angular'
 
   getValor(){
@@ -44,6 +45,10 @@ export class DataBidingComponent implements OnInit {
 
   botaoClicado(){
     alert('Clicou')
+  }
+
+  onMudouValor(evento:any){
+    console.log(evento.novoValor)
   }
 
   constructor() { }
